@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Playing JS</title>
+</head>
+<body>
+
+	<h1 id="hello">Hello Universe!</h1>
+	<h2 id="jscript">We can do cool things with JavaScript...</h2>
+
+	<button id="color">Color</button>
+	<button id="noColor">No Color</button>
+
+	<script>					
+		function changeColor() { //criando uma funcao de nome changeColor
+			var Hello = document.querySelector('#hello'); //var para declarar variaveis e/ou acessar elementos
+			var Jscript = document.querySelector('#jscript');
+
+			Hello.style.color = '#BF00FF'; //atribuindo uma acao para a variavel Hello
+			Jscript.style.color = '#01DF01';
+		}
+
+		function resetColor() { 
+			var Hello = document.querySelector('#hello');
+			var Jscript = document.querySelector('#jscript');
+
+			Hello.style = {};
+			Jscript.style = {};
+		}
+
+		var btnColor = document.getElementById('color');
+		var btnNoColor = document.getElementById('noColor');
+
+		/*Utilizando as funcoes criadas
+		as funcoes estao sendo passadas como parâmetro para uma outra funcao, 
+		junto com o evento de clicar no botao*/
+		btnColor.addEventListener('click', changeColor);
+		btnNoColor.addEventListener('click', resetColor);
+	</script>
+	<style>
+		*{
+			text-align: center;
+		}
+	</style>	
+</body>
+</html>

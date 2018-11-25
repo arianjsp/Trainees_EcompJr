@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Menu de coisas</h1>
+        <ul>
+            <li onclick="changeImg('img/gato.png')"><h4>Gato</h4></li>
+            <li onclick="changeImg('img/casa.png')"><h4>Casa</h4></li>
+            <li onclick="changeImg('img/jake.png')"><h4>Jake</h4></li>
+            <li onclick="changeImg('img/moto.png')"><h4>Moto</h4></li>
+        </ul>
+    </div>
+    <div>
+        <img src="img/foto.png" id="novaFoto" alt="">
+    </div>
+    
+    <script>
+        function changeImg(foto) {
+            document.getElementById("novaFoto").src = foto;
+        }
+    </script>
+</body>
+</html>
